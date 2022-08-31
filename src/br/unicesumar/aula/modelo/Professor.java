@@ -4,10 +4,7 @@ public class Professor extends Academico implements Funcionario{
     private String cpf;
     private Periodo periodo;
 
-    @Override
-    public String getCodigoIdentificador() {
-        return this.cpf;
-    }
+
 
     public String getCpf() {
         return cpf;
@@ -25,8 +22,15 @@ public class Professor extends Academico implements Funcionario{
         this.periodo = periodo;
     }
 
+
+    @Override
+    public String getCodigoIdentificacao() {
+        return this.cpf;
+    }
+
     @Override
     public String escalaTrabalho() {
         return periodo.name();
     }
 }
+
